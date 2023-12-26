@@ -1,0 +1,11 @@
+br.com.desafio.totvs
+br.com.desafio.totvs.config
+br.com.desafio.totvs.controllers
+br.com.desafio.totvs.data.vo.v1
+br.com.desafio.totvs.exceptions
+br.com.desafio.totvs.exceptions.handler
+br.com.desafio.totvs.mapper
+br.com.desafio.totvs.model
+br.com.desafio.totvs.repositories
+br.com.desafio.totvs.services
+br.com.desafio.totvs.utils

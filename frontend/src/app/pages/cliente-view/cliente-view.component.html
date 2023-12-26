@@ -1,0 +1,10 @@
+<div class="po-row">
+    <div class="po-lg-12 po-md-12 po-sm-12 text-align-right">
+        <po-button class="po-sm-3" p-icon="po-icon-plus" p-label="Novo Cliente" p-size="medium"
+            p-kind="secondary" (p-click)="novoCliente()">
+        </po-button>
+    </div>
+</div>
+
+<po-table [p-columns]="columns" [p-items]="items" [p-actions]="actions" [p-actions-right]="true">
+</po-table>
