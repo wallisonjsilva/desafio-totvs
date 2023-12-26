@@ -1,0 +1,48 @@
+<form [formGroup]="clienteForm">
+    <div class="po-row">
+        <po-input class="po-md-12" formControlName="nome" p-icon="p-icon-user" [p-pattern]="pattern"
+            p-icon="po-icon-user" [p-error-pattern]="errorPattern" [p-maxlength]="maxlength" [p-minlength]="minlength"
+            [p-help]="help" p-label="Nome cliente"></po-input>
+    </div>
+
+    <div class="po-row">
+        <po-select class="po-md-6" name="icon" formControlName="sexo" p-label="Sexo" [p-options]="sexoOptions">
+        </po-select>
+
+        <po-datepicker class="po-md-6" formControlName="dataNascimento" p-clean p-format="dd/mm/yyyy"
+            [p-max-date]="maxDate" p-label="Data Nascimento">
+        </po-datepicker>
+    </div>
+
+    <br />
+    <div class="po-row">
+        <div class="po-lg-12 po-md-12 po-sm-12 text-align-right">
+            <po-button class="po-sm-3" p-icon="po-icon-close" p-label="Voltar" p-size="medium" p-kind="secondary"
+                (p-click)="voltar()">
+            </po-button>
+            <po-button class="po-sm-3" p-icon="po-icon-ok" p-label="Salvar" p-size="medium" p-kind="primary"
+                (p-click)="salvar()" [p-disabled]="!clienteForm.valid">
+            </po-button>
+        </div>
+    </div>
+
+    <br />
+</form>
+
+<br />
+
+<po-tabs>
+    <po-tab [p-active]="true" p-label="Endereço">
+        <div class="po-row">
+            <div class="po-lg-12 po-md-12 po-sm-12 text-align-right">
+                <po-button class="po-sm-3" p-icon="po-icon-plus" p-label="Novo Endereço" p-size="medium"
+                    p-kind="secondary" (p-click)="novoEndereco()">
+                </po-button>
+            </div>
+        </div>
+        <desafio-endereco-view></desafio-endereco-view>
+    </po-tab>
+    <po-tab p-label="Telefones">
+        <desafio-telefone-view></desafio-telefone-view>
+    </po-tab>
+</po-tabs>

@@ -1,0 +1,4 @@
+.text-align-right {
+    display: flex;
+    flex-direction: row-reverse;
+}

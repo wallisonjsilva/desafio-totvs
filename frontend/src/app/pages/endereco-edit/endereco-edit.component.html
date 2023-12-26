@@ -1,0 +1,36 @@
+<form [formGroup]="enderecoForm">
+    <div class="po-row">
+        <po-input class="po-md-4" formControlName="cep" [p-mask]="mask"
+            p-label="CEP" (p-blur)="buscarCep()"></po-input>
+        <po-input class="po-md-6" formControlName="logradouro" p-icon="po-icon-pin" [p-maxlength]="150"
+            p-label="Logradouro"></po-input>
+        <po-number class="po-md-2" formControlName="numero"  [p-maxlength]="99999"
+            p-label="Nº"></po-number>
+    </div>
+
+    <div class="po-row">
+        <po-input class="po-md-4" formControlName="bairro" [p-maxlength]="50"
+            p-label="Bairro"></po-input>
+        <po-input class="po-md-4" formControlName="cidade" [p-maxlength]="50"
+            p-label="Cidade"></po-input>
+        <po-select class="po-md-4" name="estados" formControlName="estado" p-label="Estado" [p-options]="estadoOptions">
+        </po-select>
+    </div>
+
+    <div class="po-row">
+        <po-input class="po-md-6" formControlName="pais" [p-maxlength]="50"
+            p-label="País"></po-input>
+    </div>
+
+    <br />
+    <div class="po-row">
+        <div class="po-lg-12 po-md-12 po-sm-12 text-align-right">
+            <po-button class="po-sm-3" p-icon="po-icon-close" p-label="Voltar" p-size="medium" p-kind="secondary"
+                (p-click)="voltar()">
+            </po-button>
+            <po-button class="po-sm-3" p-icon="po-icon-ok" p-label="Salvar" p-size="medium" p-kind="primary"
+                (p-click)="salvar()" [p-disabled]="disabledButton">
+            </po-button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,75 @@
+# Ignore diretórios e arquivos de dependências
+node_modules/
+/dist/
+*.log
+
+# Ignore arquivos de configuração locais
+.angular-cli.json
+.angular.json
+*.komodoproject
+.komodoide/
+.vscode/
+
+# Ignore arquivos de compilação TypeScript
+*.ngc
+*.ngfactory.ts
+*.ngstyle.ts
+
+# Ignore arquivos de configuração do editor
+.editorconfig
+.idea/
+# Ignore arquivos de configuração do Eclipse
+.classpath
+.project
+.settings/
+
+# Ignore arquivos gerados pelo build
+bin/
+target/
+
+# Ignore arquivos de log
+log/
+*.log
+
+# Ignore arquivos temporários
+*.tmp
+*.bak
+
+# Ignore arquivos de propriedades do Maven
+.mvn
+mvn*.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+
+# Ignore diretórios específicos do Spring Boot
+spring-boot-starter/target/
+spring-boot-starter-*/target/
+
+
+# Ignore arquivos de cache
+*.log
+*.log.*
+*.log*
+yarn-debug.log*
+npm-debug.log*
+pnpm-debug.log*
+pnpm-debug.log
+*.pnp.*
+.pnp.js
+
+# Ignore arquivos de build
+*.js.map
+*.css.map
+
+# Ignore arquivos de teste
+/test.ts
+/spec.ts
+
+# Ignore arquivos de backup
+*~
+*.swp
+
+# Ignore arquivos temporários
+.tmp/
+.temp/

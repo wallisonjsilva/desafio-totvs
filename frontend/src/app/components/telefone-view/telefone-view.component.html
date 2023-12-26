@@ -1,0 +1,23 @@
+<div class="po-row">
+    <div class="po-lg-12 po-md-12 po-sm-12 text-align-right">
+        <po-button class="po-sm-3" p-icon="po-icon-plus" p-label="Novo Telefone" p-size="medium"
+            p-kind="secondary" (p-click)="novoTelefone()">
+        </po-button>
+    </div>
+</div>
+
+<po-table [p-columns]="columns" [p-items]="items" [p-actions]="actions" [p-actions-right]="true">
+</po-table>
+
+<po-modal #modal [p-size]="size" p-title="Cadastro Telefone" p-icon="po-icon-device-smartphone">
+    <form [formGroup]="telefoneForm">
+        <div class="po-row">
+            <po-input class="po-md-12" formControlName="telefone" p-icon="po-icon-device-smartphone" [p-help]="help"
+                p-label="Contato do Cliente" [p-mask]="mask"></po-input>
+        </div>
+    </form>
+    <po-modal-footer>
+        <po-button p-label="Fechar" (p-click)="modal.close()"> </po-button>
+        <po-button p-label="Salvar" p-kind="primary" (p-click)="salvarTelefone()"> </po-button>
+    </po-modal-footer>
+</po-modal>
